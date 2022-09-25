@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VendingMachine</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index_2.css">
     <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
@@ -16,43 +16,52 @@
     </header>
     <main>
         <section class="vanding_sec">
-            <h2>vendingsec</h2>
-            <div class="menu">
-            <ul>
-                <li class="menu_1">
-                    <img src="./image/original_cola.png" alt="원조콜라">
+            <h2 class="txt-hide">vendingsec</h2>
+            <ul class="menu">
+                <li class="menu_item">
+                    <button class="menu_button" id="cartin_ori">
+                    <img class="cola_img" src="./image/original_cola.png" alt="원조콜라">
                     <p class="cola_name">Original_Cola</p>
-                    <button class="cartin_button">1000원</button>
+                    <p class="price">1000원</p>
+                    </button>
                 </li>
-                <li class="menu_2">
-                    <img src="./image/violet_cola.png" alt="보라콜라">
+                <li class="menu_item">
+                    <button class="menu_button" id="cartin_vio">
+                    <img class="cola_img" src="./image/violet_cola.png" alt="보라콜라">
                     <p class="cola_name">Violet_Cola</p>
-                    <button class="cartin_button">1000원</button>
+                    <p class="price">1000원</p>
+                    </button>
                 </li>
-                <li class="menu_3">
-                    <img src="./image/yellow_cola.png" alt="노란콜라">
+                <li class="menu_item" >
+                    <button class="menu_button" id="cartin_yel">
+                    <img class="cola_img" src="./image/yellow_cola.png" alt="노란콜라">
                     <p class="cola_name">Yellow_Cola</p>
-                    <button class="cartin_button">1000원</button>
+                    <p class="price">1000원</p>
+                </button>
                 </li>
-                <li class="menu_4">
-                    <img src="./image/cool_cola.png" alt="하늘콜라">
+                <li class="menu_item" >
+                    <button class="menu_button" id="cartin_col">
+                    <img class="cola_img" src="./image/cool_cola.png" alt="하늘콜라">
                     <p class="cola_name">Cool_Cola</p>
-                    <button class="cartin_button">1000원</button>
+                    <p class="price">1000원</p>
+                </button>
                 </li>
-                <li class="menu_5">
-                    <img src="./image/green_cola.png" alt="초록콜라">
+                <li class="menu_item">
+                    <button class="menu_button" id="cartin_gre">
+                    <img class="cola_img" src="./image/green_cola.png" alt="초록콜라">
                     <p class="cola_name">Green_Cola</p>
-                    <button class="cartin_button">1000원</button>
+                    <p class="price">1000원</p>
+                </button>
                 </li>
-                <li class="menu_6">
-                    <img src="./image/orange_cola.png" alt="주황콜라">
+                <li class="menu_item" >
+                    <button class="menu_button" id="cartin_ora">
+                    <img class="cola_img" src="./image/orange_cola.png" alt="주황콜라">
                     <p class="cola_name">Orange_Cola</p>
-                    <button class="cartin_button">1000원</button>
+                    <p class="price">1000원</p>
+                    </button>
                 </li>
             </ul>
-        </div>
         <div class="vending_area">
-            <div>
                 <p class="balance_dis">잔액: <span class="balance">1,000</span>원 </p>
                 <button class="return_change">거스름돈 반환</button>
                 <input class="eposit_money_dis" type="text" name="deposit_money" id="deposit_money" placeholder="입금액 입력"></form>
@@ -72,14 +81,13 @@
                     </ul>
                 </div>
                 <button class="get_cola">획득</button>
-            </div>
         </div>
         </section>
         
         <section class="mymoney_sec">
-            <h2>소지금</h2>
-            <span class="mymoney">25000</span>
-            원
+            <h2 class="txt-hide">소지금</h2>
+            <span>소지금: </span>
+            <span id="mymoney">25,000 원</span>
         </section>
         <section class="mycola_sec">
             <h2>획득한 음료</h2>
