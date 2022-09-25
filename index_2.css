@@ -219,7 +219,24 @@ background-color: #fff;
 padding: 9px 27px;
 grid-column: 2/3;
 grid-row: 1/2;
+padding: 9px 27px;
+font-family: 'Noto Sans KR';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
 }
+#mymoney{
+    font-weight: 700;
+}
+main .mymoney_sec .mymoney_area{
+    background: #EAE8FE;
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 main .mycola_sec{
 background-color: #fff;
