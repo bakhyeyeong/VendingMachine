@@ -33,12 +33,38 @@ flex-direction: column;
 justify-content: space-between;
 }
 main .vanding_sec .menu{
+position: relative;
+z-index: 0;
 display: grid;
 grid-template-columns: repeat(3, minmax(94px, auto));
 column-gap: 12px;
 grid-template-rows: repeat(2, minmax(130px, auto));
 row-gap: 12px;
 align-items: center;
+}
+main .vanding_sec .menu .menu_item{
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;  
+}
+.soldout::after{
+    content:" ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0%;
+    left:0%;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(./image/soldout.png);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.select{
+    box-sizing: border-box;
+    border: 3px solid #6327FE;
+    border-radius: 10px;
+    margin: -3px;
 }
 main .vanding_sec .menu .menu_item .menu_button{
 width: 94px;
@@ -52,11 +78,6 @@ display: flex;
 justify-content: space-evenly;
 flex-direction: column;
 align-items: center;
-}
-main .vanding_sec .menu .menu_item .menu_button:active{
-    border: 3px solid #6327FE;
-    box-sizing: border-box;
-    border-radius: 10px;
 }
 main .vanding_sec .menu .menu_item .cola_img{
     width: 36px;
@@ -149,7 +170,7 @@ main .vanding_sec .vending_area .deposit{
 main .vanding_sec .vending_area .cart_dis{
     width: 200px;
     height: 106px;
-    overflow: auto;
+    overflow-y: scroll;
     border-style: none;
     background: #EAE8FE;
     border: 1px solid #BDBDBD;
@@ -215,16 +236,16 @@ main .vanding_sec .vending_area .get_cola{
 
 /* mymoney_sec */
 main .mymoney_sec{
-background-color: #fff;
-padding: 9px 27px;
-grid-column: 2/3;
-grid-row: 1/2;
-padding: 9px 27px;
-font-family: 'Noto Sans KR';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
+    background-color: #fff;
+    padding: 9px 27px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 9px 27px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
 }
 #mymoney{
     font-weight: 700;
@@ -237,10 +258,79 @@ main .mymoney_sec .mymoney_area{
     justify-content: space-between;
 }
 
-
+/* mycola_sec css */
 main .mycola_sec{
-background-color: #fff;
-padding: 25px 27px;
-grid-column: 2/3;
-grid-row: 2/3;
+    background-color: #fff;
+    padding: 25px 27px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+main .mycola_sec h2{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+main .mycola_sec .mycola_area{
+    box-sizing: border-box;
+    background-color: #EAE8FE;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    margin-top: 13px;
+    margin-bottom: 6px;
+    padding: 12px;
+    overflow-y: scroll;
+    width:306px;
+    height: 364px;
+}
+main .mycola_sec .mycola_area::-webkit-scrollbar{
+    width:4px;
+}
+main .mycola_sec .mycola_area::-webkit-scrollbar-thumb{
+    height: 79px;
+    background-color: #FFF;
+    border-radius: 50px;
+}
+main .mycola_sec .mycola_area .mycola{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    background-color: #FFF;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    justify-content: space-between;
+}
+main .mycola_sec .mycola_area .mycola img{
+    width: 18px;
+    height: 33px;
+}
+main .mycola_sec .mycola_area .mycola .cola_name{
+    flex-basis: 190px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+}
+main .mycola_sec .mycola_area .mycola .cola_number{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 10px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
+main .mycola_sec .total_price{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: right;
 }
