@@ -1,0 +1,62 @@
+@charset 'utf-8';
+
+/* 유틸리티 스타일 */
+.ir {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.img-item {
+    display: block;
+}
+
+
+/* 레이아웃 */
+body {
+    background-color: #EAE8FE;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 28px;
+    padding-top: 247px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+#app .tit-app {
+    position: absolute;
+    width: 386px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#app .vending-machine,
+#app .my-info {
+    flex-basis: 360px;
+    background-color: #fff;
+}
+
+
+#app .tit-app .img-item {
+    width: 100%;
+}
+
+
+
+/* 자판기 스타일 */
+#app .vending-machine {
+    padding: 31px 27px 28px;
+}
+
+.vending-machine .list-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
